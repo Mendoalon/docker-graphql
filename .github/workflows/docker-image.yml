@@ -43,6 +43,13 @@ jobs:
       env:
         NEW_VERSION: ${{ steps.version.outputs.version }}
       run: |
-        docker push luismendozait/docker-graphql:$NEW_VERSION .
+        docker push luismendozait/docker-graphql:$NEW_VERSION
         docker push luismendozait/docker-graphql:latest
+
+#   - name: Push Docker Image
+#     env:
+#       NEW_VERSION: ${{ steps.version.outputs.version }}
+#      run: |
+#        docker push luismendozait/docker-graphql:$NEW_VERSION .
+#        docker push luismendozait/docker-graphql:latest
            
